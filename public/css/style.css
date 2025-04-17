@@ -19,7 +19,7 @@ body{
     
 }
 
-.navbar_principal{
+.navbar_container{
     justify-content: space-between;
     display: flex;
     align-items: center;
@@ -50,3 +50,43 @@ body{
     gap: 20px;
     justify-content: right;
 }
+
+
+.footer {
+    position: fixed;  
+    bottom: 0; 
+    width: 100%;
+    background-color: #057794; 
+    color: rgb(0, 0, 0); 
+    padding: 35px 0; 
+    text-align: center; 
+    margin-top: 40px; 
+    
+}
+
+
+.footer_container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+
+#itens_footer {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+
+.item_footer {
+    color: rgb(0, 0, 0); 
+    text-decoration: none; 
+    font-size: 16px; 
+    transition: color 0.3s ease; 
+}
+
+.item_footer:hover {
+    text-decoration: underline; 
+}
+
