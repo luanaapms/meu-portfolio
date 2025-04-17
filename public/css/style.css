@@ -1,0 +1,52 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: azure;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #057794; 
+    padding: 1.5rem 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.navbar_principal{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#titulo_navbar{
+    text-decoration: none;
+    font-size: 130%;
+    color: black;
+    font-weight: 600;
+    cursor: default;
+  }
+
+.item_navbar{
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease;
+  }
+
+.item_navbar:hover {
+    transform: scale(1.08);
+    font-weight: 200;
+  }
+
+#itens_navbar{
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+}
