@@ -15,14 +15,14 @@ app.get('/projects', (req, res) => {
     const projetos = [
           {
             nome: 'PontoLog',
-            descricao: 'Dashboard web projetado para transformar dados brutos logísticos em uma interface visual intuitiva e completa.',
+            descricao: 'Dashboard Web projetado de dados logísticos sobre o desempenho dos Estados Brasileiros no comércio exterior em uma interface visual intuitiva.',
             url: 'https://github.com/CodeDontBlow/PontoLog',
-            tecnologias: ['HTML', 'CSS', 'TypeScript', 'ReactJs', 'NodeJs', 'Python', 'Google Colab'],
+            tecnologias: ['HTML', 'CSS', 'TypeScript', 'ReactJs', 'Python', 'Google Colab'],
             imagem: '/img/projetos/LogoPL.svg'
         },
         {
             nome: 'Scrum Tutor',
-            descricao: 'Website interativo e educativo que capacite os usuários a dominarem a metodologia Scrum para o gerenciamento eficaz de projetos.',
+            descricao: 'Website interativo e educativo, com módulos e jogos, que capacite os usuários a dominarem a metodologia Scrum para o gerenciamento eficaz de projetos.',
             url: 'https://github.com/CodeDontBlow/Scrum-Tutor',
             tecnologias: ['HTML', 'CSS', 'Bootstrap', 'Python', 'Flask', 'JavaScript', 'MySQL', 'AWS'],
             imagem: '/img/projetos/LogoST.svg'

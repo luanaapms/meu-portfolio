@@ -217,7 +217,6 @@ main {
   margin-bottom: 10px;
 }
 
-
 /* Certificados */
 .certificates-section {
   padding: 20px;
@@ -228,7 +227,6 @@ main {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 50px;
-  letter-spacing: 0.1rem;
 }
 
 .certificate-card {
@@ -245,6 +243,7 @@ main {
   font-size: 18px;
   margin-top: 15px;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .certificate-card p {
@@ -271,7 +270,6 @@ main {
 .projects {
   padding: 20px;
   text-align: center;
-  letter-spacing: 0.1rem;
 }
 
 .project-list {
@@ -285,13 +283,13 @@ main {
   background: #ffffff;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .project-item img {
   width: 50%;
-  height: auto;
+  height: 100px;
   border-radius: 5px;
 }
 
@@ -303,6 +301,7 @@ main {
 .project-item p {
   font-size: 1em;
   color: #555;
+  margin-bottom: 10px;
 }
 
 .project-item .tech-list {
