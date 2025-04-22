@@ -1,4 +1,41 @@
-<%- include('partials/navbar') %>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
 
+    <main>
+        <section class="projects">
+            <h2>Meus Projetos:</h2>
+            <div class="project-list">
+                <% projetos.forEach(projeto => { %>
+                    <div class="project-item">
+                        <img src="<%= projeto.imagem %>" alt="<%= projeto.nome %>">
+                        <h3><%= projeto.nome %></h3>
+                        <p><%= projeto.descricao %></p>
+                        
+                        <h4>Tecnologias usadas:</h4>
+                        <ul class="tech-list">
+                            <% projeto.tecnologias.forEach(tecnologia => { %>
+                                <li><%= tecnologia %></li>
+                            <% }) %>
+                        </ul>
+                        <a href="<%= projeto.url %>" target="_blank" class="project-link">Ver no GitHub</a>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+    
+    <%- include('partials/footer') %>
+    
+    </body>
+    </html>
+    
 
-<%- include('partials/footer') %>
