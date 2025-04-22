@@ -11,6 +11,14 @@ app.get('/', (req, res) => {
     res.render('index');
   });
 
+app.get("/projects", (req, res) => {
+    res.render("projects", { title: "Projetos"});
+});
+
+app.get("/certificates", (req, res) => {
+  res.render("certificates", { title: "Certificados"});
+});
+
 app.listen(port, () => {
     console.log(`Servidor iniciado com sucesso!`);
 });

@@ -1,9 +1,38 @@
 <footer class="footer">
-    <div class="footer_container">
-        <div id="itens_footer">
-            <a href="https://github.com/luanaapms" class="item_footer" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/luana-moraes-souza/" class="item_footer" target="_blank">LinkedIn</a>
-            <a href="mailto:luanamsouza0505@gmail.com" class="item_footer">Contato</a>
-        </div>
+  <div class="footer_container">
+    <div class="footer_top">
+      <div class="footer_section">
+        <h4>Sobre</h4>
+        <p>Desenvolvido por Luana Souza. Este site é um portfólio pessoal com projetos, experiências e contatos profissionais.</p>
+      </div>
+
+      <div class="footer_section">
+        <h4>Redes Sociais</h4>
+        <a href="https://github.com/luanaapms" class="item_footer" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.instagram.com/luanaapms/" class="item_footer" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+
+      <div class="footer_section">
+        <h4>Contato</h4>
+        <a href="mailto:luanamsouza0505@gmail.com" class="item_footer">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://www.linkedin.com/in/luana-moraes-souza/" class="item_footer" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
     </div>
+
+    <div class="footer_bottom">
+      <p>&copy; <span id="year"></span> Luana Souza. Todos os direitos reservados.</p>
+    </div>
+  </div>
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>

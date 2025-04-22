@@ -1,15 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Portifolio</title>
 </head>
 <body>
     <%- include('partials/navbar') %>
+        <main>
+            <div class="container-perfil">
+                <div class="container-sobremim">
+                  <h1>Olá, eu sou a </h1>
+                  <p class="title-name"> Luana Souza!</p>
+                  <p>Estudante de Análise e Desenvolvimento de Sistemas na FATEC SJC, sou apaixonada
+                    por tecnologia. Fora do mundo do código, gosto de ler livros e de fazer doces —
+                    atividades que me ajudam a relaxar e estimular a criatividade.
+                    Também adoro aprender coisas novas e transformar boas ideias em soluções práticas. Estou em
+                    constante evolução, sempre buscando crescer e gerar um impacto positivo no mundo.
+                  </p>
+                </div>
+                <div class="container-foto">
+                  <img src="img/foto/fotoPerfil.jpeg" alt="Foto de Luana Souza" />
+                  <a class="botao-download" href="img/curriculo/Currículo Luana Souza.pdf" download> Currículo </a>
+                </div>
+            </div>
 
-    <%- include('partials/footer') %>
-    
+            <div class="skills-section">
+                <div class="skills-header">
+                    <h2><b>Minhas Habilidades:</b></h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <div class="icon-wrapper">
+                            <i class="fa-brands fa-html5 fa-2x" style="color: #e34f26;"></i>
+                        </div>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="icon-wrapper">
+                            <i class="fa-brands fa-css3 fa-2x" style="color: #1572b6;"></i>
+                        </div>
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="icon-wrapper">
+                            <i class="fa-brands fa-js fa-2x" style="color: #f7df1e;"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="icon-wrapper">
+                            <i class="fa-brands fa-react fa-2x" style="color: #61dafb;"></i>
+                        </div>
+                        <h3>React</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-code fa-2x" style="color: #3178c6;"></i>
+                        </div>
+                        <h3>TypeScript</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="icon-wrapper">
+                            <i class="fa-brands fa-python fa-2x" style="color: #3776ab;"></i>
+                        </div>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-database fa-2x" style="color: #00758f;"></i>
+                        </div>
+                        <h3>MySQL</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="icon-wrapper">
+                            <i class="fa-brands fa-github fa-2x" style="color: #171515;"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-file-excel fa-2x" style="color: #217346;"></i>
+                        </div>
+                        <h3>Excel</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="icon-wrapper">
+                            <i class="fa-brands fa-bootstrap fa-2x" style="color: #7952b3;"></i>
+                        </div>
+                        <h3>Bootstrap</h3>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        <%- include('partials/footer') %>
 </body>
 </html>
