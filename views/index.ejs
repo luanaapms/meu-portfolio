@@ -8,23 +8,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Portfolio</title>
 </head>
+
 <body>
     <%- include('partials/navbar') %>
         <main>
             <div class="container-perfil">
                 <div class="container-sobremim">
-                  <h1>Olá, eu sou a </h1>
-                  <p class="title-name"> Luana Souza!</p>
-                  <p>Estudante de Análise e Desenvolvimento de Sistemas na FATEC SJC, apaixonada
-                    por tecnologia. Fora do mundo do código, gosto de ler livros e de fazer doces —
-                    atividades que me ajudam a relaxar e estimular a criatividade.
-                    Também adoro aprender coisas novas e transformar boas ideias em soluções práticas. Estou em
-                    constante evolução, sempre buscando crescer e gerar um impacto positivo no mundo.
-                  </p>
+                    <h1>Hello Word!</h1>
+                    <p class="title-name"> Eu sou a Luana Souza :) </p>
+                    <p class="about-text">Estudante de Análise e Desenvolvimento de Sistemas na FATEC SJC e apaixonada
+                        por tecnologia. Adoro aprender coisas novas e transformar boas ideias em soluções práticas.
+                        Estou em
+                        constante evolução, sempre buscando crescer e gerar um impacto positivo no mundo.
+                        <br><br>
+                    </p>
+                    <a class="botao-download" href="img/curriculo/Currículo Luana Souza.pdf" download> Veja meu
+                        currículo </a>
                 </div>
                 <div class="container-foto">
-                  <img src="img/foto/fotoPerfil.jpeg" alt="Foto de Luana Souza" />
-                  <a class="botao-download" href="img/curriculo/Currículo Luana Souza.pdf" download> Currículo </a>
+                    <img src="img/foto/fotoPerfil.jpeg" alt="Foto de Luana Souza" />
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-event">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3>Início nos Estudos</h3>
+                        <p>Ingressei na ETEC no curso de Desenvolvimento de Sistemas e comecei os estudos sobre lógica
+                            de
+                            programação, banco de dados e desenvolvimento web. Durante esse período, participei de
+                            projetos escolares e comecei a desenvolver pequenos sistemas, aplicando os conhecimentos
+                            adquiridos.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Faculdade de Tecnologia</h3>
+                        <p>Iniciei o curso superior em Análise e Desenvolvimento de Sistemas na FATEC, aprofundando 
+                            conhecimentos em estruturas de dados, orientação a objetos, bancos de dados,
+                            versionamento com Git e desenvolvimento web moderno. Essa fase marcou meu aprofundamento
+                            técnico e minha introdução a
+                            projetos mais complexos em equipe.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>Projetos Pessoais</h3>
+                        <p>
+                            Passei a focar na criação de aplicações web completas, integrando front-end e back-end com
+                            tecnologias como JavaScript, React, Node.js e bancos de dados relacionais.
+                            Paralelamente, participei de diversos cursos e bootcamps voltados para desenvolvimento web,
+                            APIs REST, e ferramentas modernas de versionamento e implantação.</p>
+                    </div>
                 </div>
             </div>
 
@@ -95,8 +136,9 @@
                     </div>
                 </div>
             </div>
-            
+
         </main>
         <%- include('partials/footer') %>
 </body>
+
 </html>
