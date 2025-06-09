@@ -34,77 +34,45 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+// Página de projetos com dados do banco
 app.get('/projects', (req, res) => {
-  const projetos = [
-    {
-      nome: 'PontoLog',
-      descricao: 'Dashboard Web projetado de dados logísticos sobre o desempenho dos Estados Brasileiros no comércio exterior em uma interface visual intuitiva.',
-      url: 'https://github.com/CodeDontBlow/PontoLog',
-      tecnologias: ['HTML', 'CSS', 'TypeScript', 'ReactJs', 'Python', 'Google Colab'],
-      imagem: '/img/projetos/LogoPL.svg'
-    },
-    {
-      nome: 'Scrum Tutor',
-      descricao: 'Website interativo e educativo, com módulos e jogos, que capacite os usuários a dominarem a metodologia Scrum para o gerenciamento eficaz de projetos.',
-      url: 'https://github.com/CodeDontBlow/Scrum-Tutor',
-      tecnologias: ['HTML', 'CSS', 'Bootstrap', 'Python', 'Flask', 'JavaScript', 'MySQL', 'AWS'],
-      imagem: '/img/projetos/LogoST.svg'
-    },
-    {
-      nome: 'DocEye',
-      descricao: 'Software de extração de informações desenvolvido para automatizar e otimizar processos seletivos, facilitando a análise de documentos como os currículos.',
-      url: 'https://github.com/CodeDontBlow/DocEye',
-      tecnologias: ['Java', 'JavaFX', 'Ollama', 'MySQL', 'Apache Maven', 'Tesseract OCR'],
-      imagem: '/img/projetos/LogoDE.svg'
-    },
-    {
-      nome: 'S.P.A',
-      descricao: 'Aplicativo funcional para dispositivos móveis, visando a proteção pessoal fornecendo um meio de segurança e comunicação entre as pessoas.',
-      url: 'https://github.com/luanaapms/tcc-app-mobile',
-      tecnologias: ['JavaScript', 'ReactNative', 'MySQL', 'Maps API´s',],
-      imagem: '/img/projetos/LogoSPA.svg'
-    },
-  ];
+  const sql = 'SELECT * FROM projetos';
 
-  res.render('projects', { title: 'Projetos', projetos });
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.error('Erro ao buscar projetos:', err.message);
+      return res.status(500).send('Erro ao carregar os projetos');
+    }
+
+    const projetos = results.map(p => ({
+      nome: p.nome,
+      descricao: p.descricao,
+      url: p.url,
+      tecnologias: p.tecnologias?.split(',') || [],
+    }));
+
+    res.render('projects', { title: 'Projetos', projetos });
+  });
 });
 
+// Página de certificados com dados do banco
+app.get('/certificates', (req, res) => {
+  const sql = 'SELECT * FROM certificados';
 
-app.get("/certificates", (req, res) => {
-  const certificados = [
-    {
-      nome: 'Certificado de Transformação Digital',
-      data: 'Agosto de 2024',
-      link: '/img/certificados/Certificado Transformação Digital.pdf'
-    },
-    {
-      nome: 'Certificado de Excel na Prática',
-      data: 'Setembro de 2024',
-      link: '/img/certificados/Certificado Excel.pdf'
-    },
-    {
-      nome: 'Certificado de Programação Orientada a Objetos',
-      data: 'Outubro de 2024',
-      link: '/img/certificados/Certificado POO.pdf'
-    },
-    {
-      nome: 'Certificado de Hardware e Software',
-      data: 'Outubro de 2024',
-      link: '/img/certificados/Certificado Hardware e Software.pdf'
-    },
-    {
-      nome: 'Certificado de Microsoft Power BI',
-      data: 'Outubro de 2024',
-      link: '/img/certificados/Certificado Microsoft Power BI.pdf'
-    },
-    {
-      nome: 'Certificado de Cibersegurança',
-      data: 'Novembro de 2023',
-      link: '/img/certificados/Certificado Cibersegurança.pdf'
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.error('Erro ao buscar certificados:', err.message);
+      return res.status(500).send('Erro ao carregar os certificados');
     }
-  ];
 
-  res.render("certificates", { title: "Certificados", certificados });
+    const certificados = results.map(c => ({
+      nome: c.nome,
+      data: c.data,
+      link: c.link,
+    }));
+
+    res.render('certificates', { title: 'Certificados', certificados });
+  });
 });
 
 // CRUD Projetos
